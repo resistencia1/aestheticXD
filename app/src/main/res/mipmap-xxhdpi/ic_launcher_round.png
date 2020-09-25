@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#C50000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar"
+        android:id="@+id/mCustomToolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#FFFFFF">
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/face"/>
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+
+                android:background="@drawable/face"
+                android:layout_weight="1"
+                />
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+
+                android:background="@drawable/face"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+
+                android:background="@drawable/face"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom"
+        >
+
+        <ImageButton
+            android:id="@+id/str"
+            android:layout_width="50dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+
+
+
+            android:paddingBottom="10dp"
+
+            android:src="@mipmap/anon" />
+
+        <DigitalClock
+            android:id="@+id/simpleDigitalClock"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="100dp"
+
+            android:padding="4dp"
+
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/startlayout"
+        android:background="@drawable/gradient_4"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:layout_width="390dp"
+        android:layout_height="500dp"
+        android:layout_above="@+id/toolbar">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:id="@+id/tmp" android:layout_width="75dp" android:layout_height="wrap_content">
+                <ImageView android:padding="6dp" android:layout_width="75dp" android:layout_height="500dp" android:src="@drawable/barrados" android:scaleType="fitXY"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp">
+                <LinearLayout android:id="@+id/calulatrice" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:padding="5dp" android:layout_width="75dp" android:layout_height="75dp" android:src="@drawable/calcl" android:scaleType="fitCenter"/>
+                    <TextView android:textSize="24sp" android:typeface="sans"
+                        android:id="@+id/text_view"
+                        android:ellipsize="end"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textStyle="normal" android:textColor="@android:color/primary_text_dark" android:layout_gravity="center_vertical" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Calculator"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/speak" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/calulatrice">
+                    <ImageView android:layout_gravity="center_vertical" android:padding="5dp" android:layout_width="75dp" android:layout_height="75dp" android:src="@drawable/generatenameicon" android:scaleType="fitCenter"/>
+                    <TextView android:textSize="24sp" android:typeface="sans" android:textStyle="normal" android:textColor="@android:color/primary_text_dark" android:layout_gravity="center_vertical" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seapunk Names"/>
+                </LinearLayout>
+                <View android:layout_gravity="center_vertical" android:id="@+id/line" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="1dp" android:layout_margin="8dp" android:layout_below="@+id/speak" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+                <LinearLayout android:id="@+id/pixel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/line">
+                    <ImageView android:layout_gravity="center_vertical" android:padding="5dp" android:layout_width="75dp" android:layout_height="75dp" android:src="@mipmap/pixelapp" android:scaleType="fitCenter"/>
+                    <TextView android:textSize="24sp" android:typeface="sans"
+                        android:id="@+id/text_view2"
+                        android:ellipsize="end"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textStyle="normal" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pixelwave App123456789"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/run" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/pixel">
+                    <ImageView android:layout_gravity="center_vertical" android:padding="5dp" android:layout_width="75dp" android:layout_height="75dp" android:src="@drawable/run" android:scaleType="fitCenter"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/monoton"
+                        android:padding="10dp"
+                        android:shadowColor="#90FF00B4"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="5"
+                        android:text="resistencia"
+                        android:textColor="#9079D0FD"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/shutdown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/run">
+                    <ImageView android:layout_gravity="center_vertical" android:padding="5dp" android:layout_width="75dp" android:layout_height="75dp" android:src="@mipmap/feedback" android:scaleType="fitCenter"/>
+                    <TextView android:textSize="24sp" android:typeface="sans" android:textStyle="normal" android:textColor="@android:color/primary_text_dark" android:layout_gravity="center_vertical" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shutdown"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/shutdown">
+                    <ImageView android:layout_gravity="center_vertical" android:padding="5dp" android:layout_width="75dp" android:layout_height="75dp" android:src="@mipmap/rate" android:scaleType="fitCenter"/>
+                    <TextView android:textSize="24sp" android:typeface="sans" android:textStyle="normal" android:textColor="@android:color/primary_text_dark" android:layout_gravity="center_vertical" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rate Us"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
