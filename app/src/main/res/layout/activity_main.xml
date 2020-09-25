@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sak2"
+    android:background="@drawable/windowsxp"
     android:layout_gravity="center"
     android:gravity="center"
     android:id="@+id/fondo"
@@ -77,6 +77,13 @@
         </VideoView>
         </FrameLayout>
     </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ｗｉｎｄｏｗｓ　古い思い出"
+            android:background="#B2B6B6"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
 </RelativeLayout>
